@@ -1,0 +1,82 @@
+.login-form-container {
+  background-color: #121212;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto';
+}
+.login-form {
+  background-color: #272727;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  row-gap: 10px;
+  width: 80%;
+}
+.website-logo{
+    width: 80px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.form-label{
+    color: #cbd5e1;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+}
+.form-input{
+    height: 40px;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid #475569;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 18px;
+    font-family: 'Roboto';
+    color: #f1f5f9; 
+}
+.submit-btn{
+    background-color: #4f46e5;
+    color:  #ffffff;
+    padding: 10px;
+    font-family: 'Roboto';
+    font-size: 20px;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.error-msg{
+    color:  #ff0b37;
+    font-size: 16px;
+    margin-top: 5px;
+}
+@media (min-width:768px){
+    .login-form{
+        width: 500px;
+        row-gap: 20px;
+    }
+    .website-logo{
+        width: 150px;
+    }
+    .form-label{
+        font-size: 18px;
+    }
+    .form-input{
+        height: 45px;
+    }
+    .form-input{
+        font-size: 20px;
+    }
+    .submit-btn{
+        font-size: 25px;
+    }
+    .error-msg{
+        font-size: 18px;
+    }
+}
