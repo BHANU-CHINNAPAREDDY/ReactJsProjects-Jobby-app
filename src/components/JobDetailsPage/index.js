@@ -104,6 +104,9 @@ class JobDetailsPage extends Component{
         }
     }
 
+    tryAgain =()=>{
+        this.getJobDetails()
+    }
 
     renderJobDetails =()=>{
         const {jobDetails} = this.state
@@ -135,7 +138,7 @@ class JobDetailsPage extends Component{
                 <div className='job-details-description-container'>
                     <div className='description-and-link'>
                         <p className='job-details-sub-header'>Description</p>
-                        <a href={companyWebsiteUrl} className='visit-link'>Visit <FaExternalLinkAlt className='visit-icon'/></a>
+                        <a href={companyWebsiteUrl} className='visit-link' target='__blank'>Visit <FaExternalLinkAlt className='visit-icon'/></a>
                     </div>
                     {jobDescription}
                 </div>
@@ -186,7 +189,7 @@ class JobDetailsPage extends Component{
             case apiStatusConstants.inProgress:
                 return this.renderLoadingView()
             case apiStatusConstants.failure:
-                return <FailureView/>
+                return <FailureView tryAgain={this.tryAgain}/>
             case apiStatusConstants.success:
                 return( 
                     <>
